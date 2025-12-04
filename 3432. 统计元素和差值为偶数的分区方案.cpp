@@ -1,26 +1,26 @@
-// Ë¼Â·
+// æ€è·¯
 // 1.vector<int> tmp; int sum = 0,count = 0;
-// 2.for(auto&e:nums)//Ç°×ººÍ
+// 2.for(auto&e:nums)//å‰ç¼€å’Œ
 //             sum+=e; tmp.push_back(sum);
 // 3.for(int i = 0;i<nums.size()-1;i++)
-// 4.int left = tmp[i]; //×ó×ÓÊı×é
-// 5.int right = tmp[tmp.size()-1]-tmp[i]; //ÓÒ×ÓÊı×é
-// 6.int ret = abs(left-right); //×ó×ÓÊı×éºÍÓÒ×ÓÊı×éÖ®²î
+// 4.int left = tmp[i]; //å·¦å­æ•°ç»„
+// 5.int right = tmp[tmp.size()-1]-tmp[i]; //å³å­æ•°ç»„
+// 6.int ret = abs(left-right); //å·¦å­æ•°ç»„å’Œå³å­æ•°ç»„ä¹‹å·®
 // 7.if(ret%2==0) count++;
 // 8.return count;
 // Code
 
-// ×÷Õß£ºStellarVibes
-// Á´½Ó£ºhttps://leetcode.cn/problems/count-partitions-with-even-sum-difference/solutions/3849307/3432-tong-ji-yuan-su-he-chai-zhi-wei-ou-08dvm/
-// À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-// Öø×÷È¨¹é×÷ÕßËùÓĞ¡£ÉÌÒµ×ªÔØÇëÁªÏµ×÷Õß»ñµÃÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦
+// ä½œè€…ï¼šStellarVibes
+// é“¾æ¥ï¼šhttps://leetcode.cn/problems/count-partitions-with-even-sum-difference/solutions/3849307/3432-tong-ji-yuan-su-he-chai-zhi-wei-ou-08dvm/
+// æ¥æºï¼šåŠ›æ‰£ï¼ˆLeetCodeï¼‰
+// è‘—ä½œæƒå½’ä½œè€…æ‰€æœ‰ã€‚å•†ä¸šè½¬è½½è¯·è”ç³»ä½œè€…è·å¾—æˆæƒï¼Œéå•†ä¸šè½¬è½½è¯·æ³¨æ˜å‡ºå¤„
 
 class Solution {
 public:
     int countPartitions(vector<int>& nums) {
         vector<int> tmp;
         int sum = 0,count = 0;
-        for(auto&e:nums)//Ç°×ººÍ
+        for(auto&e:nums)//å‰ç¼€å’Œ
         {
             sum+=e;
             tmp.push_back(sum);
@@ -28,9 +28,9 @@ public:
         cout<<endl;
         for(int i = 0;i<nums.size()-1;i++)
         {
-            int left = tmp[i]; //×ó×ÓÊı×é
-            int right = tmp[tmp.size()-1]-tmp[i]; //ÓÒ×ÓÊı×é
-            int ret = abs(left-right); //×ó×ÓÊı×éºÍÓÒ×ÓÊı×éÖ®²î
+            int left = tmp[i]; //å·¦å­æ•°ç»„
+            int right = tmp[tmp.size()-1]-tmp[i]; //å³å­æ•°ç»„
+            int ret = abs(left-right); //å·¦å­æ•°ç»„å’Œå³å­æ•°ç»„ä¹‹å·®
             if(ret%2==0) count++;
         }
         return count;
